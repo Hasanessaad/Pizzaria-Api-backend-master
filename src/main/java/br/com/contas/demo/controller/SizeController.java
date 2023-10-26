@@ -28,7 +28,7 @@ public class SizeController {
     }
 
     @PostMapping
-    public ResponseEntity<Size> create(@Valid @RequestBody SizeDTO sizeDTO) {
+    public ResponseEntity<Size> create( @RequestBody SizeDTO sizeDTO) {
         return service.create(sizeDTO);
     }
 

@@ -53,6 +53,7 @@ public class SizeService {
         try {
             Size Sizee = new Size();
             BeanUtils.copyProperties(sizeDTO, Sizee);
+            System.out.println("size foi cadastrado");
 
             repository.save(Sizee);
 
