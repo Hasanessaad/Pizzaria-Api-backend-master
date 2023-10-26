@@ -54,6 +54,9 @@ public class SizeService {
             Size Sizee = new Size();
             BeanUtils.copyProperties(sizeDTO, Sizee);
             System.out.println("size foi cadastrado");
+            System.out.println(Sizee.getTamanho());
+            System.out.println(Sizee.getNsabor());
+
 
             repository.save(Sizee);
 

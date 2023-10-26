@@ -11,11 +11,22 @@ public class Size {
     private Long id;
     private String Tamanho;
     private Integer Nsabor;
-    public Size(Long id, String tamanho, Integer nsabor) {
+
+    private Integer Npedacos;
+
+    public Size(Long id, String tamanho, Integer nsabor, Integer npedacos) {
         this.id = id;
         Tamanho = tamanho;
-
         Nsabor = nsabor;
+        Npedacos = npedacos;
+    }
+
+    public Integer getNpedacos() {
+        return Npedacos;
+    }
+
+    public void setNpedacos(Integer npedacos) {
+        Npedacos = npedacos;
     }
 
     public Size() {
