@@ -31,6 +31,7 @@ public class SaborService {
         } else {
             Sabor sabor = sabor_update.get();
             BeanUtils.copyProperties(saborDTO,sabor);
+            repository.save(sabor);
             return ResponseEntity.ok(sabor_update);
 
         }

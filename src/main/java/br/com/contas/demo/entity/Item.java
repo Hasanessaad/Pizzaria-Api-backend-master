@@ -16,7 +16,10 @@ public class Item {
     private String codigo;
     private Float preco;
     private Boolean pizza;
-    private Integer tamanho;
+
+    @ManyToOne
+    @JoinColumn(name = "tamanho_id")
+    private Size tamanho;
     private String extra;
     private String remove;
 @ManyToMany
@@ -38,7 +41,7 @@ public class Item {
         this.pizza = pizza;
     }
 
-    public Item(Long id, String codigo, Float preco, Boolean pizza, Integer tamanho, String extra, String remove) {
+    public Item(Long id, String codigo, Float preco, Boolean pizza, Size tamanho, String extra, String remove) {
         this.id = id;
         this.codigo = codigo;
         this.preco = preco;
@@ -76,11 +79,11 @@ public class Item {
         this.pizza = pizza;
     }
 
-    public Integer getTamanho() {
+    public Size getTamanho() {
         return tamanho;
     }
 
-    public void setTamanho(Integer tamanho) {
+    public void setTamanho(Size tamanho) {
         this.tamanho = tamanho;
     }
 
